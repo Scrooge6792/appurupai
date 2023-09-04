@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:appurupai/route/route.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:appurupai/theme/theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final savedThemeMode = await AdaptiveTheme.getThemeMode();
-  runApp(ProviderScope(
-      child: App(
-        savedThemeMode: savedThemeMode,
-      )
+  runApp(App(
+    savedThemeMode: savedThemeMode,
   ));
 }
 
